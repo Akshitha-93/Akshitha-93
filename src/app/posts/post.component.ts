@@ -29,19 +29,19 @@ export class PostsComponent implements OnInit {
       this.posts.splice(0, 0, post);
     });
   }
-  updatePost(post: { id: string }) {
-    this.service.updatePosts(post)
-    .subscribe((response): void => {
-      this.posts = response;
-    });
-  }
-  deletePost(post: { id: string; }): void{
-    this.service.deletePosts(post)
-    .subscribe(response => {
-      let index = this.posts.indexOf(post);
-      this.posts.splice(index, 1);
+  // updatePost(post: { id: string }) {
+  //   this.service.updatePosts(post)
+  //   .subscribe((response): void => {
+  //     this.posts = response;
+  //   });
+  // }
+  // deletePost(post: { id: string; }): void{
+  //   this.service.deletePosts(post)
+  //   .subscribe(response => {
+  //     let index = this.posts.indexOf(post);
+  //     this.posts.splice(index, 1);
 
-    })
-  }
+  //   })
+  // }
    
 }
